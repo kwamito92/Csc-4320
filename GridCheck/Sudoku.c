@@ -1,3 +1,5 @@
+//need to implement subgrid check for all 9 subgrids. Code only checks top-left grid. 
+
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,7 +9,8 @@
 int valid[num_threads] = {0};
 int grid = 2;
 
-/* You will need a structure to store the information to be passed to each thread (see "Passing Parameters to Each Thread" in the textbook's project description)*/
+/* You will need a structure to store the information to be passed to each thread 
+(see "Passing Parameters to Each Thread" in the textbook's project description)*/
 typedef struct{
 	int row;
 	int column;
